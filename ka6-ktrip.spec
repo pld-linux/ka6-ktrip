@@ -35,6 +35,7 @@ BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	shared-mime-info >= 1.0
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
+Requires(post,postun):	desktop-file-utils
 BuildRequires:	zlib-devel
 Obsoletes:	ka5-itinerary < 24
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -69,6 +70,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post
+%update_desktop_database_post
+
+%postun
+%update_desktop_database_postun
 
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
