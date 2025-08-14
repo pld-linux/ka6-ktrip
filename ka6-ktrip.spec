@@ -2,18 +2,18 @@
 # Conditional build:
 %bcond_with	tests		# test suite
 
-%define		kdeappsver	25.04.3
+%define		kdeappsver	25.08.0
 %define		kframever	6.13.0
 %define		qtver		6.8
 %define		kaname		ktrip
 Summary:	Ktrip
 Name:		ka6-%{kaname}
-Version:	25.04.3
+Version:	25.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	d0d49909511699b4d2c067ae73ea905e
+# Source0-md5:	b4cf6b18f2ca02733fc24395d02b4bba
 URL:		https://apps.kde.org/itinerary/
 BuildRequires:	Qt6Test-devel
 BuildRequires:	Qt6Widgets-devel >= 5.15.2
@@ -25,7 +25,7 @@ BuildRequires:	kf6-kconfig-devel >= %{kframever}
 BuildRequires:	kf6-kcoreaddons-devel >= %{kframever}
 BuildRequires:	kf6-kcrash-devel >= %{kframever}
 BuildRequires:	kf6-ki18n-devel >= %{kframever}
-BuildRequires:	kf6-kirigami-addons-devel >= 0.11.0
+BuildRequires:	kf6-kirigami-addons-devel >= 1.8.0
 BuildRequires:	kf6-qqc2-desktop-style-devel >= %{kframever}
 BuildRequires:	ninja
 BuildRequires:	pkgconfig
