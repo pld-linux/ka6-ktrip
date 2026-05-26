@@ -42,8 +42,15 @@ Obsoletes:	ka5-itinerary < 24
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-KTrip is a public transport assistant targeted towards mobile Linux
-and Android.
+KTrip helps you navigate in public transport. It allows you to find
+journeys between specified locations, departures for a specific
+station and shows real-time delay and disruption information.
+
+%description -l pl.UTF-8
+KTrip pomaga przemieszczać się transportem publicznym. Umożliwia
+odpytanie o połączenia pomiędzy dwoma danymi miejscami, odjazdy z
+danego przystanku wraz z opóźnieniami i utrudnieniami w czasie
+rzeczywistym.
 
 %prep
 %setup -q -n %{kaname}-%{version}
