@@ -2,18 +2,18 @@
 # Conditional build:
 %bcond_with	tests		# test suite
 
-%define		kdeappsver	26.04.3
+%define		kdeappsver	26.08.0
 %define		kframever	6.13.0
 %define		qtver		6.8
 %define		kaname		ktrip
 Summary:	Ktrip
 Name:		ka6-%{kaname}
-Version:	26.04.3
+Version:	26.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	532156d046f4dd51472c0609258ad6b9
+# Source0-md5:	eabfafff3952a8a0f238e4f91cedc1f7
 URL:		https://apps.kde.org/itinerary/
 BuildRequires:	Qt6Test-devel
 BuildRequires:	Qt6Widgets-devel >= 5.15.2
@@ -92,3 +92,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/org.kde.ktrip.desktop
 %{_iconsdir}/hicolor/scalable/apps/org.kde.ktrip.svg
 %{_datadir}/metainfo/org.kde.ktrip.appdata.xml
+%{_datadir}/config.kcfg/ktripsettings.kcfg
